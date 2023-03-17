@@ -10,6 +10,7 @@ def json_reader(url_data) -> list:
     response = requests.get(url_data)
     result = response.json()
     return result
+    
 def check_data_for_empty_dict(data_list: list) -> list:
     """
     Функция поверяет переданный, в качестве аргумента списковый словарь, на наличие пустых словарей.
@@ -57,6 +58,7 @@ def date_editor(data_dict: dict) -> str:
     else:
         formatted_date = 'Ошибка прочтения даты'
     return formatted_date
+    
 def users_account_editor(data_dict: dict) -> str:
     """
     Функция принимает в качестве аргумента словарь, в котором содержится информация о
@@ -95,6 +97,7 @@ def users_account_editor(data_dict: dict) -> str:
         name_card = 'Вклад'
         coded_account = 'открыт'
     return f"{name_card} {coded_account.strip()}"
+    
 def beneficiary_account_editor(data_dict: dict) -> str:
     """
     Функция кодирует счет получателя таким образом, что пользователь видит 6 последних цифр номера счета,
